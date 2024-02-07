@@ -1,0 +1,155 @@
+@import "./mixins.scss";
+
+.wp-admin.post-type-petition [data-type="amnesty-core/block-section"] .section .block-editor-block-list__layout {
+  flex-direction: column;
+}
+
+.wp-admin.post-type-petition .block-editor-block-list__layout {
+  display: flex;
+  flex-wrap: wrap;
+
+  .section {
+    .wp-block {
+      width: 90%;
+      max-width: 580px;
+    }
+
+    .block-list-appender {
+      width: 100%;
+    }
+  }
+
+  [data-type="amnesty/petition-template"] {
+    flex: 0 0 calc(100% - 450px);
+    margin-left: 0;
+    max-width: none;
+
+    .wp-block {
+      max-width: 100%;
+      width: 90%;
+    }
+
+    .block-list-appender {
+      width: 100%;
+    }
+  }
+
+  [data-type="amnesty/petition"] {
+    margin-right: 0;
+    max-width: 400px;
+  }
+}
+
+.wp-block-amnesty-petition {
+  .btn {
+    background-color: #000;
+    border: none;
+  }
+
+  .btn .block-editor-plain-text {
+    border-color: #fff;
+    color: #fff;
+
+    @include placeholder {
+      color: #fff;
+    }
+  }
+}
+
+.wp-block-amnesty-petition.is-style-dark-grey .block-editor-plain-text:not(.petition-content) {
+  border-color: #fff;
+  color: #fff;
+}
+
+.petition-title {
+  font-size: 41px !important;
+}
+
+.wp-block-amnesty-petition p {
+  margin-top: 0 !important;
+  margin-bottom: 12px !important;
+}
+
+.wp-block-amnesty-petition .block-editor-plain-text {
+  display: block;
+  border: 1px dotted #000;
+  border-radius: 0;
+  background-color: transparent;
+  color: #000;
+}
+
+.petition-contentReveal {
+  dl, dt, dd {
+    box-sizing: border-box;
+  }
+
+  dl::after {
+    top: 20px;
+  }
+
+  dd {
+    padding: 0;
+  }
+
+  dd .block-editor-plain-text {
+    padding: 12px;
+  }
+}
+
+.petition-content {
+  background-color: #fff !important;
+}
+
+.petition-formExtra {
+  flex-direction: column;
+}
+
+.petition-mailerConsent {
+  display: flex;
+
+  .components-radio-control {
+    width: 100%;
+  }
+
+  .components-base-control__field {
+    display: flex;
+  }
+
+  .components-radio-control__option {
+    display: flex;
+    flex-basis: 50%;
+    background-color: transparent;
+
+    label {
+      font-size: 16px;
+      white-space: pre;
+    }
+  }
+
+  .components-radio-control__input {
+    padding: 4px !important;
+    border-radius: 0 !important;
+    border: 1px solid #000 !important;
+    width: 32px;
+    height: 32px;
+    background-clip: content-box !important;
+
+    &:checked {
+      background-color: #000 !important;
+    }
+  }
+}
+
+.wp-block-amnesty-petition .btn {
+  margin-bottom: 12px;
+  padding: 0;
+}
+
+.wp-block-amnesty-petition .btn .block-editor-plain-text {
+  padding: 14px 24px;
+  text-align: center;
+}
+
+.wp-block-amnesty-petition .petition-form-iframe input {
+  color: #000;
+}
