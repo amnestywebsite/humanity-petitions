@@ -131,15 +131,10 @@ class Register_Block {
 			'mailingList'  => esc_html( $settings['mailing_list_text'] ?? '' ),
 			'redirect'     => esc_url( $settings['redirect'] ?? home_url() ),
 			'locale'       => str_replace( '_', '-', get_locale() ),
-			'defaultType'  => 'form',
-			'formEnabled'  => true,
+			'defaultType'  => $this->default_block_type(),
+			'formEnabled'  => $this->form_enabled(),
 			'postTypeSlug' => esc_js( get_option( 'aip_petition_slug' ) ?: 'petition' ),
 		];
-
-		if ( version_compare( $this->version, '1.1.0', '>=' ) ) {
-			$data['defaultType'] = $this->default_block_type();
-			$data['formEnabled'] = $this->form_enabled();
-		}
 
 		if ( get_the_ID() ) {
 			try {
