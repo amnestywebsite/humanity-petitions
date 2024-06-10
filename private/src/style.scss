@@ -166,6 +166,7 @@
   }
 }
 
+
 .petition-formExtra {
   display: flex;
   margin-bottom: 24px;
@@ -241,4 +242,18 @@
 
 iframe {
   border: none;
+}
+
+.fse .petition-title,
+.fse .petition-subtitle,
+.fse .petition-contentReveal dt {
+  font-family: var(--wp--preset--font-family--secondary);
+}
+
+.fse .petition-formFill input {
+  font-family: var(--wp--preset--font-family--primary);
+
+  @include placeholder {
+    font-family: var(--wp--preset--font-family--primary);
+  }
 }
