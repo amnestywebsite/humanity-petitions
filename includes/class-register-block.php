@@ -124,7 +124,7 @@ class Register_Block {
 		wp_enqueue_script( 'amnesty-petitions-editor', plugins_url( 'assets/scripts/editor.js', __DIR__ ), $js_deps, $this->version, true );
 		wp_set_script_translations( 'amnesty-petitions-editor', 'aip', dirname( Init::$file ) . '/languages' );
 
-		$settings = get_option( 'amnesty_petitions_settings' );
+		$settings = get_option( 'amnesty_petitions_settings' ) ?: [];
 
 		$data = [
 			'terms'        => wp_kses_post( wpautop( $settings['terms_text'] ?? '' ) ),
