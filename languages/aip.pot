@@ -2,35 +2,40 @@
 # This file is distributed under the GPLv2.
 msgid ""
 msgstr ""
-"Project-Id-Version: Humanity Petitions 1.0.0\n"
+"Project-Id-Version: Humanity Petitions 1.1.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/petitions\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-02-08T16:04:50+00:00\n"
+"POT-Creation-Date: 2024-07-10T14:55:51+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"X-Generator: WP-CLI 2.8.1\n"
+"X-Generator: WP-CLI 2.10.0\n"
 "X-Domain: aip\n"
 
 #. Plugin Name of the plugin
+#: amnesty-petitions.php
 msgid "Humanity Petitions"
 msgstr ""
 
 #. Plugin URI of the plugin
+#: amnesty-petitions.php
 msgid "https://github.com/amnestywebsite/humanity-petitions"
 msgstr ""
 
 #. Description of the plugin
+#: amnesty-petitions.php
 msgid "Enable petitions support, with interface for synchronising data to a CRM. CRM integrations not included."
 msgstr ""
 
 #. Author of the plugin
+#: amnesty-petitions.php
 msgid "Amnesty International"
 msgstr ""
 
 #. Author URI of the plugin
+#: amnesty-petitions.php
 msgid "https://www.amnesty.org"
 msgstr ""
 
@@ -46,15 +51,15 @@ msgstr ""
 
 #. translators: [admin]
 #: includes/class-logs-list-table.php:21
-#: includes/class-post-type-petition.php:363
-#: includes/class-post-type-petition.php:412
-#: private/src/editor/blocks/petition/index.jsx:29
+#: includes/class-post-type-petition.php:343
+#: includes/class-post-type-petition.php:392
+#: assets/scripts/editor.js:706
 msgid "Petition"
 msgstr ""
 
 #. translators: [admin]
 #: includes/class-logs-list-table.php:23
-#: includes/class-post-type-petition.php:410
+#: includes/class-post-type-petition.php:390
 msgid "Petitions"
 msgstr ""
 
@@ -111,7 +116,7 @@ msgstr ""
 
 #. translators: [admin]
 #: includes/class-page-settings.php:116
-#: private/src/editor/blocks/petition/DisplayComponent.jsx:137
+#: assets/scripts/editor.js:338
 msgid "Thank You URL"
 msgstr ""
 
@@ -122,7 +127,7 @@ msgstr ""
 
 #. translators: [admin]
 #: includes/class-page-settings.php:127
-#: private/src/editor/blocks/petition/DisplayComponent.jsx:150
+#: assets/scripts/editor.js:351
 msgid "Thank You Title"
 msgstr ""
 
@@ -133,7 +138,7 @@ msgstr ""
 
 #. translators: [admin]
 #: includes/class-page-settings.php:138
-#: private/src/editor/blocks/petition/DisplayComponent.jsx:159
+#: assets/scripts/editor.js:360
 msgid "Thank You Sub-title"
 msgstr ""
 
@@ -144,7 +149,7 @@ msgstr ""
 
 #. translators: [admin]
 #: includes/class-page-settings.php:149
-#: private/src/editor/blocks/petition/DisplayComponent.jsx:168
+#: assets/scripts/editor.js:369
 msgid "Thank You Content"
 msgstr ""
 
@@ -297,145 +302,145 @@ msgid ""
 msgstr ""
 
 #. translators: [admin]
-#: includes/class-post-type-petition.php:101
+#: includes/class-post-type-petition.php:100
 msgid "Petitions URL slug"
 msgstr ""
 
 #. translators: [admin]
-#: includes/class-post-type-petition.php:365
+#: includes/class-post-type-petition.php:345
 msgid "Petition post type"
 msgstr ""
 
 #. translators: [admin]
-#: includes/class-post-type-petition.php:406
+#: includes/class-post-type-petition.php:386
 msgctxt "Post Type General Name"
 msgid "Petitions"
 msgstr ""
 
 #. translators: [admin]
-#: includes/class-post-type-petition.php:408
+#: includes/class-post-type-petition.php:388
 msgctxt "Post Type Singular Name"
 msgid "Petition"
 msgstr ""
 
 #. translators: [admin]
-#: includes/class-post-type-petition.php:414
+#: includes/class-post-type-petition.php:394
 msgid "Petition Archives"
 msgstr ""
 
 #. translators: [admin]
-#: includes/class-post-type-petition.php:416
+#: includes/class-post-type-petition.php:396
 msgid "Petition Attributes"
 msgstr ""
 
 #. translators: [admin]
-#: includes/class-post-type-petition.php:418
+#: includes/class-post-type-petition.php:398
 msgid "Parent Petition:"
 msgstr ""
 
 #. translators: [admin]
-#: includes/class-post-type-petition.php:420
+#: includes/class-post-type-petition.php:400
 msgid "All Petitions"
 msgstr ""
 
 #. translators: [admin]
-#: includes/class-post-type-petition.php:422
+#: includes/class-post-type-petition.php:402
 msgid "Add New Petition"
 msgstr ""
 
 #. translators: [admin]
-#: includes/class-post-type-petition.php:424
+#: includes/class-post-type-petition.php:404
 #: includes/class-post-type-signatory.php:77
 msgid "Add New"
 msgstr ""
 
 #. translators: [admin]
-#: includes/class-post-type-petition.php:426
+#: includes/class-post-type-petition.php:406
 msgid "New Petition"
 msgstr ""
 
 #. translators: [admin]
-#: includes/class-post-type-petition.php:428
+#: includes/class-post-type-petition.php:408
 msgid "Edit Petition"
 msgstr ""
 
 #. translators: [admin]
-#: includes/class-post-type-petition.php:430
+#: includes/class-post-type-petition.php:410
 msgid "Update Petition"
 msgstr ""
 
 #. translators: [admin]
-#: includes/class-post-type-petition.php:432
+#: includes/class-post-type-petition.php:412
 msgid "View Petition"
 msgstr ""
 
 #. translators: [admin]
-#: includes/class-post-type-petition.php:434
+#: includes/class-post-type-petition.php:414
 msgid "View Petitions"
 msgstr ""
 
 #. translators: [admin]
-#: includes/class-post-type-petition.php:436
+#: includes/class-post-type-petition.php:416
 msgid "Search Petition"
 msgstr ""
 
 #. translators: [admin]
-#: includes/class-post-type-petition.php:438
+#: includes/class-post-type-petition.php:418
 msgid "No Petitions Found"
 msgstr ""
 
 #. translators: [admin]
-#: includes/class-post-type-petition.php:440
+#: includes/class-post-type-petition.php:420
 msgid "No Petitions Found in Trash"
 msgstr ""
 
 #. translators: [admin]
-#: includes/class-post-type-petition.php:442
+#: includes/class-post-type-petition.php:422
 #: includes/class-post-type-signatory.php:95
 msgid "Featured Image"
 msgstr ""
 
 #. translators: [admin]
-#: includes/class-post-type-petition.php:444
+#: includes/class-post-type-petition.php:424
 #: includes/class-post-type-signatory.php:97
 msgid "Set featured image"
 msgstr ""
 
 #. translators: [admin]
-#: includes/class-post-type-petition.php:446
+#: includes/class-post-type-petition.php:426
 #: includes/class-post-type-signatory.php:99
 msgid "Remove featured image"
 msgstr ""
 
 #. translators: [admin]
-#: includes/class-post-type-petition.php:448
+#: includes/class-post-type-petition.php:428
 #: includes/class-post-type-signatory.php:101
 msgid "Use as featured image"
 msgstr ""
 
 #. translators: [admin]
-#: includes/class-post-type-petition.php:450
+#: includes/class-post-type-petition.php:430
 msgid "Insert into Petition"
 msgstr ""
 
 #. translators: [admin]
-#: includes/class-post-type-petition.php:452
+#: includes/class-post-type-petition.php:432
 #: includes/class-post-type-signatory.php:105
 msgid "Uploaded to this petition"
 msgstr ""
 
 #. translators: [admin]
-#: includes/class-post-type-petition.php:454
+#: includes/class-post-type-petition.php:434
 msgid "Petitions list"
 msgstr ""
 
 #. translators: [admin]
-#: includes/class-post-type-petition.php:456
+#: includes/class-post-type-petition.php:436
 msgid "Petitions list navigation"
 msgstr ""
 
 #. translators: [admin]
-#: includes/class-post-type-petition.php:458
+#: includes/class-post-type-petition.php:438
 msgid "Filter Petitions"
 msgstr ""
 
@@ -569,39 +574,39 @@ msgstr ""
 
 #. translators: [admin]
 #: includes/class-register-block.php:106
-#: private/src/editor/blocks/petition/DisplayComponent.jsx:20
+#: assets/scripts/editor.js:221
 msgid "Form"
 msgstr ""
 
 #. translators: [admin]
 #: includes/class-register-block.php:108
-#: private/src/editor/blocks/petition/DisplayComponent.jsx:12
+#: assets/scripts/editor.js:213
 msgid "Iframe"
 msgstr ""
 
 #. translators: [front] petitions call to action button
-#: includes/class-register-block.php:266
-#: private/src/editor/blocks/petition/DisplayComponent.jsx:239
+#: includes/class-register-block.php:261
+#: assets/scripts/editor.js:440
 msgid "Act Now"
 msgstr ""
 
 #. translators: [admin/front]
-#: includes/class-register-block.php:271
-#: private/src/editor/blocks/petition/DisplayComponent.jsx:347
+#: includes/class-register-block.php:266
+#: assets/scripts/editor.js:548
 msgid "Sign the petition"
 msgstr ""
 
 #. translators: [admin/front] whether the user wants to sign up to the newsletter when signing a petition
-#: includes/class-register-block.php:285
-#: private/src/editor/blocks/petition/DisplayComponent.jsx:107
-#: private/src/editor/blocks/petition/index.jsx:60
+#: includes/class-register-block.php:280
+#: assets/scripts/editor.js:308
+#: assets/scripts/editor.js:737
 msgid "Yes, I agree"
 msgstr ""
 
 #. translators: [admin/front] whether the user wants to sign up to the newsletter when signing a petition
-#: includes/class-register-block.php:289
-#: private/src/editor/blocks/petition/DisplayComponent.jsx:120
-#: private/src/editor/blocks/petition/index.jsx:64
+#: includes/class-register-block.php:284
+#: assets/scripts/editor.js:321
+#: assets/scripts/editor.js:741
 msgid "No, I do not agree"
 msgstr ""
 
@@ -658,7 +663,7 @@ msgstr ""
 
 #. translators: [front/admin] %s: the current number of signatures
 #: views/block-form.php:27
-#: private/src/editor/blocks/petition/DisplayComponent.jsx:369
+#: assets/scripts/editor.js:570
 msgid "%s has signed."
 msgid_plural "%s have signed."
 msgstr[0] ""
@@ -671,7 +676,7 @@ msgstr ""
 
 #. translators: [admin/front] %s: the target number of signatures
 #: views/block-form.php:29
-#: private/src/editor/blocks/petition/DisplayComponent.jsx:377
+#: assets/scripts/editor.js:578
 msgctxt "Petition target signatory count"
 msgid "Let's get to %s"
 msgstr ""
@@ -693,226 +698,221 @@ msgstr ""
 
 #. translators: [front/admin] input placeholder text
 #: views/petition-form.php:13
-#: private/src/editor/blocks/petition/DisplayComponent.jsx:324
+#: assets/scripts/editor.js:525
 msgid "Email"
 msgstr ""
 
+#: assets/scripts/editor.js:75
+msgid "Hide from curation blocks and index pages"
+msgstr ""
+
 #. translators: [admin]
-#: private/src/editor/blocks/petition/DisplayComponent.jsx:55
+#: assets/scripts/editor.js:131
+msgid "Petition Container"
+msgstr ""
+
+#. translators: [admin]
+#: assets/scripts/editor.js:133
+msgid "The container for a petition"
+msgstr ""
+
+#. translators: [admin/front] text alignment
+#: assets/scripts/editor.js:183
+msgid "Default"
+msgstr ""
+
+#. translators: [admin]
+#: assets/scripts/editor.js:190
+msgid "Dark grey background"
+msgstr ""
+
+#. translators: [admin]
+#: assets/scripts/editor.js:256
 msgid "Petition Form Source"
 msgstr ""
 
 #. translators: [admin]
-#: private/src/editor/blocks/petition/DisplayComponent.jsx:57
+#: assets/scripts/editor.js:258
 msgid "Source"
 msgstr ""
 
 #. translators: [admin]
-#: private/src/editor/blocks/petition/DisplayComponent.jsx:72
+#: assets/scripts/editor.js:273
 msgid "Petition Settings"
 msgstr ""
 
 #. translators: [admin]
-#: private/src/editor/blocks/petition/DisplayComponent.jsx:74
+#: assets/scripts/editor.js:275
 msgid "Show petition content"
 msgstr ""
 
 #. translators: [admin]
-#: private/src/editor/blocks/petition/DisplayComponent.jsx:79
+#: assets/scripts/editor.js:280
 msgid "Petition content initially visible"
 msgstr ""
 
 #. translators: [admin]
-#: private/src/editor/blocks/petition/DisplayComponent.jsx:82
+#: assets/scripts/editor.js:283
 msgid "Whether the petition content is expanded by default"
 msgstr ""
 
 #. translators: [admin]
-#: private/src/editor/blocks/petition/DisplayComponent.jsx:89
+#: assets/scripts/editor.js:290
 msgid "Newsletter Settings"
 msgstr ""
 
 #. translators: [admin]
-#: private/src/editor/blocks/petition/DisplayComponent.jsx:93
+#: assets/scripts/editor.js:294
 msgid "Show newsletter signup fields"
 msgstr ""
 
 #. translators: [admin]
-#: private/src/editor/blocks/petition/DisplayComponent.jsx:100
+#: assets/scripts/editor.js:301
 msgid "Label for acceptance"
 msgstr ""
 
 #. translators: [admin]
-#: private/src/editor/blocks/petition/DisplayComponent.jsx:103
+#: assets/scripts/editor.js:304
 msgid "Label text for newsletter signup acceptance"
 msgstr ""
 
 #. translators: [admin]
-#: private/src/editor/blocks/petition/DisplayComponent.jsx:113
+#: assets/scripts/editor.js:314
 msgid "Label for rejection"
 msgstr ""
 
 #. translators: [admin]
-#: private/src/editor/blocks/petition/DisplayComponent.jsx:116
+#: assets/scripts/editor.js:317
 msgid "Label text for newsletter signup rejection"
 msgstr ""
 
 #. translators: [admin]
-#: private/src/editor/blocks/petition/DisplayComponent.jsx:129
+#: assets/scripts/editor.js:330
 msgid "Thank You Settings"
 msgstr ""
 
 #. translators: [admin]
-#: private/src/editor/blocks/petition/DisplayComponent.jsx:135
+#: assets/scripts/editor.js:336
 msgid "Override the global redirect URL for this petition, if desired"
 msgstr ""
 
 #. translators: [admin]
-#: private/src/editor/blocks/petition/DisplayComponent.jsx:143
+#: assets/scripts/editor.js:344
 msgid "Show Thank You Content fields"
 msgstr ""
 
 #. translators: [admin]
-#: private/src/editor/blocks/petition/DisplayComponent.jsx:153
+#: assets/scripts/editor.js:354
 msgid "Override the global Thank You Title for this petition, if desired"
 msgstr ""
 
 #. translators: [admin]
-#: private/src/editor/blocks/petition/DisplayComponent.jsx:162
+#: assets/scripts/editor.js:363
 msgid "Override the global Thank You Sub-title for this petition, if desired"
 msgstr ""
 
 #. translators: [admin]
-#: private/src/editor/blocks/petition/DisplayComponent.jsx:171
+#: assets/scripts/editor.js:372
 msgid "Override the global Thank You Content for this petition, if desired"
 msgstr ""
 
 #. translators: [admin]
-#: private/src/editor/blocks/petition/DisplayComponent.jsx:180
+#: assets/scripts/editor.js:381
 msgid "Target Settings"
 msgstr ""
 
 #. translators: [admin]
-#: private/src/editor/blocks/petition/DisplayComponent.jsx:184
+#: assets/scripts/editor.js:385
 msgid "Target signature count"
 msgstr ""
 
 #. translators: [admin]
-#: private/src/editor/blocks/petition/DisplayComponent.jsx:193
+#: assets/scripts/editor.js:394
 msgid "Show target reached text"
 msgstr ""
 
 #. translators: [admin]
-#: private/src/editor/blocks/petition/DisplayComponent.jsx:196
+#: assets/scripts/editor.js:397
 msgid "Show additional text on petition when signature target has been reached"
 msgstr ""
 
 #. translators: [admin]
-#: private/src/editor/blocks/petition/DisplayComponent.jsx:203
+#: assets/scripts/editor.js:404
 msgid "Target reached text"
 msgstr ""
 
 #. translators: [admin]
-#: private/src/editor/blocks/petition/DisplayComponent.jsx:210
+#: assets/scripts/editor.js:411
 msgid "Replace progress indicator"
 msgstr ""
 
 #. translators: [admin]
-#: private/src/editor/blocks/petition/DisplayComponent.jsx:213
+#: assets/scripts/editor.js:414
 msgid "Replace the progress indicator with the above text when the target is reached"
 msgstr ""
 
 #. translators: [admin]
-#: private/src/editor/blocks/petition/DisplayComponent.jsx:247
+#: assets/scripts/editor.js:448
 msgid "Subtitle"
 msgstr ""
 
 #. translators: [admin]
-#: private/src/editor/blocks/petition/DisplayComponent.jsx:274
+#: assets/scripts/editor.js:475
 msgid "See the petition content"
 msgstr ""
 
 #. translators: [admin]
-#: private/src/editor/blocks/petition/DisplayComponent.jsx:283
+#: assets/scripts/editor.js:484
 msgid "Petition content"
 msgstr ""
 
 #. translators: [front/admin] input placeholder text
-#: private/src/editor/blocks/petition/DisplayComponent.jsx:303
+#: assets/scripts/editor.js:504
 msgid "First name"
 msgstr ""
 
 #. translators: [front/admin] input placeholder text
-#: private/src/editor/blocks/petition/DisplayComponent.jsx:310
+#: assets/scripts/editor.js:511
 msgid "Last name"
 msgstr ""
 
 #. translators: [front/admin] input placeholder text
-#: private/src/editor/blocks/petition/DisplayComponent.jsx:317
+#: assets/scripts/editor.js:518
 msgid "Phone"
 msgstr ""
 
 #. translators: [admin]
-#: private/src/editor/blocks/petition/DisplayComponent.jsx:410
+#: assets/scripts/editor.js:611
 msgid "Iframe URL"
 msgstr ""
 
 #. translators: [admin]
-#: private/src/editor/blocks/petition/DisplayComponent.jsx:411
+#: assets/scripts/editor.js:612
 msgid "Enter the URL for the iframe"
 msgstr ""
 
 #. translators: [admin]
-#: private/src/editor/blocks/petition/DisplayComponent.jsx:414
+#: assets/scripts/editor.js:615
 msgctxt "Example petition iframe URL"
 msgid "https://join.amnesty.org/page/12345/action/1?locale=en-US"
 msgstr ""
 
 #. translators: [admin]
-#: private/src/editor/blocks/petition/DisplayComponent.jsx:425
+#: assets/scripts/editor.js:626
 msgid "Apply UTM parameters to iframe URI"
 msgstr ""
 
 #. translators: [admin]
-#: private/src/editor/blocks/petition/DisplayComponent.jsx:430
+#: assets/scripts/editor.js:631
 msgid "Iframe Height"
 msgstr ""
 
 #. translators: [admin]
-#: private/src/editor/blocks/petition/DisplayComponent.jsx:431
+#: assets/scripts/editor.js:632
 msgid "Enter the height for the iframe"
 msgstr ""
 
 #. translators: [admin]
-#: private/src/editor/blocks/petition/index.jsx:31
+#: assets/scripts/editor.js:708
 msgid "Add a petition"
-msgstr ""
-
-#. translators: [admin/front] text alignment
-#: private/src/editor/blocks/petition/utils.js:11
-msgid "Default"
-msgstr ""
-
-#. translators: [admin]
-#: private/src/editor/blocks/petition/utils.js:18
-msgid "Light grey background"
-msgstr ""
-
-#. translators: [admin]
-#: private/src/editor/blocks/petition/utils.js:25
-msgid "Dark grey background"
-msgstr ""
-
-#: private/src/editor/plugins/visibility/index.jsx:75
-msgid "Hide from curation blocks and index pages"
-msgstr ""
-
-#. translators: [admin]
-#: private/src/editor/template/index.jsx:27
-msgid "Petition Container"
-msgstr ""
-
-#. translators: [admin]
-#: private/src/editor/template/index.jsx:29
-msgid "The container for a petition"
 msgstr ""
