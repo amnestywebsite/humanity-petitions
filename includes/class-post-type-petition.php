@@ -187,7 +187,7 @@ class Post_Type_Petition {
 			return;
 		}
 
-		$types = $query->get( 'post_type' ) ? (array) $query->get( 'post_type' ) : [ 'post' ];
+		$types = $query->get( 'post_type' ) ? (array) $query->get( 'post_type' ) : [ 'page', 'post' ];
 		$types = $this->list_query_post_types( $types );
 
 		$query->set( 'post_type', $types );
