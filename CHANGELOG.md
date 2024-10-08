@@ -1,3 +1,7 @@
+### v1.1.1
+Fixes:
+- Add pages to default search post types
+
 ### v1.1.0
 Features:
 - Introduce full site editing support
