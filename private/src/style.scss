@@ -59,7 +59,7 @@
 
 .petition-title,
 .petition-subtitle {
-  font-family: var(--font-family-secondary);
+  font-family: var(--wp--preset--font-family--secondary);
   text-align: center;
 }
 
@@ -102,7 +102,7 @@
     padding: 12px 32px 12px 10px;
     width: 100%;
     border: 1px solid #000;
-    font-family: var(--font-family-secondary);
+    font-family: var(--wp--preset--font-family--secondary);
     font-size: 16px;
     font-weight: 600;
     text-transform: uppercase;
@@ -154,7 +154,7 @@
   width: 100%;
   border-radius: 0;
   border: 1px solid #000;
-  font-family: var(--font-family-primary);
+  font-family: var(--wp--preset--font-family--primary);
   text-transform: unset;
 
   &:last-child {
@@ -162,7 +162,7 @@
   }
 
   @include placeholder {
-    font-family: var(--font-family-primary);
+    font-family: var(--wp--preset--font-family--primary);
   }
 }
 
