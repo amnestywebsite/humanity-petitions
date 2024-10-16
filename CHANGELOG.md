@@ -1,3 +1,7 @@
+### v2.0.0
+Breaking changes:
+- Typography CSS vars have been replaced
+
 ### v1.1.1
 Fixes:
 - Add pages to default search post types
