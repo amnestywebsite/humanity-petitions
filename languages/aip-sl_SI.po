@@ -3,15 +3,19 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Humanity Petitions 2.0.0\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/humanity-petitions\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/humanity-"
+"petitions\n"
+"POT-Creation-Date: 2025-01-28T18:10:01+00:00\n"
+"PO-Revision-Date: 2025-01-28 18:10+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: sl_SI\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-01-28T18:10:01+00:00\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"X-Generator: WP-CLI 2.11.0\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100>=3 && "
+"n%100<=4 ? 2 : 3);\n"
+"X-Generator: Poedit 3.4.4\n"
 "X-Domain: aip\n"
 
 #. Plugin Name of the plugin
@@ -26,7 +30,9 @@ msgstr ""
 
 #. Description of the plugin
 #: amnesty-petitions.php
-msgid "Enable petitions support, with interface for synchronising data to a CRM. CRM integrations not included."
+msgid ""
+"Enable petitions support, with interface for synchronising data to a CRM. "
+"CRM integrations not included."
 msgstr ""
 
 #. Author of the plugin
@@ -41,7 +47,9 @@ msgstr ""
 
 #. translators: [admin] %s: list of missing plugins
 #: amnesty-petitions.php:140
-msgid "The Amnesty International Petitions plugin requires these plugins to be active: %s"
+msgid ""
+"The Amnesty International Petitions plugin requires these plugins to be "
+"active: %s"
 msgstr ""
 
 #. translators: [front]
@@ -52,8 +60,7 @@ msgstr ""
 #. translators: [admin]
 #: includes/class-logs-list-table.php:21
 #: includes/class-post-type-petition.php:343
-#: includes/class-post-type-petition.php:392
-#: assets/scripts/editor.js:706
+#: includes/class-post-type-petition.php:392 assets/scripts/editor.js:706
 msgid "Petition"
 msgstr ""
 
@@ -99,8 +106,7 @@ msgid "Config"
 msgstr ""
 
 #. translators: [admin]
-#: includes/class-page-settings.php:93
-#: includes/class-page-settings.php:287
+#: includes/class-page-settings.php:93 includes/class-page-settings.php:287
 msgid "Petitions Settings"
 msgstr ""
 
@@ -115,47 +121,51 @@ msgid "Set the destination for signatory data"
 msgstr ""
 
 #. translators: [admin]
-#: includes/class-page-settings.php:116
-#: assets/scripts/editor.js:338
+#: includes/class-page-settings.php:116 assets/scripts/editor.js:338
 msgid "Thank You URL"
 msgstr ""
 
 #. translators: [admin]
 #: includes/class-page-settings.php:118
-msgid "Redirect to this URL after signing a petition (can be overriden in the petition itself). Leave blank to redirect back to the petition."
+msgid ""
+"Redirect to this URL after signing a petition (can be overriden in the "
+"petition itself). Leave blank to redirect back to the petition."
 msgstr ""
 
 #. translators: [admin]
-#: includes/class-page-settings.php:127
-#: assets/scripts/editor.js:351
+#: includes/class-page-settings.php:127 assets/scripts/editor.js:351
 msgid "Thank You Title"
 msgstr ""
 
 #. translators: [admin]
 #: includes/class-page-settings.php:129
-msgid "Display this title after signing a petition (can be overriden in the petition itself)"
+msgid ""
+"Display this title after signing a petition (can be overriden in the "
+"petition itself)"
 msgstr ""
 
 #. translators: [admin]
-#: includes/class-page-settings.php:138
-#: assets/scripts/editor.js:360
+#: includes/class-page-settings.php:138 assets/scripts/editor.js:360
 msgid "Thank You Sub-title"
 msgstr ""
 
 #. translators: [admin]
 #: includes/class-page-settings.php:140
-msgid "Display this sub-title after signing a petition (can be overriden in the petition itself)"
+msgid ""
+"Display this sub-title after signing a petition (can be overriden in the "
+"petition itself)"
 msgstr ""
 
 #. translators: [admin]
-#: includes/class-page-settings.php:149
-#: assets/scripts/editor.js:369
+#: includes/class-page-settings.php:149 assets/scripts/editor.js:369
 msgid "Thank You Content"
 msgstr ""
 
 #. translators: [admin]
 #: includes/class-page-settings.php:151
-msgid "Display this content after signing a petition (can be overriden in the petition itself)"
+msgid ""
+"Display this content after signing a petition (can be overriden in the "
+"petition itself)"
 msgstr ""
 
 #. translators: [admin]
@@ -165,7 +175,8 @@ msgstr ""
 
 #. translators: [admin]
 #: includes/class-page-settings.php:162
-msgid "Text to show on a petition to encourage users to sign up to the mailing list"
+msgid ""
+"Text to show on a petition to encourage users to sign up to the mailing list"
 msgstr ""
 
 #. translators: [admin]
@@ -215,7 +226,9 @@ msgstr ""
 
 #. translators: [admin]
 #: includes/class-page-settings.php:219
-msgid "Thank You email message subject; dynamic variables available: {site_name}, {petition_title}"
+msgid ""
+"Thank You email message subject; dynamic variables available: {site_name}, "
+"{petition_title}"
 msgstr ""
 
 #. translators: [admin]
@@ -225,7 +238,9 @@ msgstr ""
 
 #. translators: [admin]
 #: includes/class-page-settings.php:233
-msgid "Thank You email message body; dynamic variables available: {first_name}, {last_name}, {petition_title}, {from_name}"
+msgid ""
+"Thank You email message body; dynamic variables available: {first_name}, "
+"{last_name}, {petition_title}, {from_name}"
 msgstr ""
 
 #. translators: [admin]
@@ -267,7 +282,9 @@ msgstr ""
 #: includes/class-petition-handler.php:196
 #: includes/class-petition-handler.php:215
 #: includes/class-petition-handler.php:243
-msgid "Something went wrong submitting the form. Please reload the page and try again."
+msgid ""
+"Something went wrong submitting the form. Please reload the page and try "
+"again."
 msgstr ""
 
 #. translators: [admin] %1$s: first name, %2$s: family name
@@ -294,8 +311,10 @@ msgid ""
 "Hello {first_name},\n"
 "\n"
 "\t\tThank you for taking action.\n"
-"\t\tOne of most important things you can do right now is share this action as widely as possible.\n"
-"\t\tWhether you share on Twitter, Facebook or Whatsapp - ask your friends and family to sign this petition today.\n"
+"\t\tOne of most important things you can do right now is share this action "
+"as widely as possible.\n"
+"\t\tWhether you share on Twitter, Facebook or Whatsapp - ask your friends "
+"and family to sign this petition today.\n"
 "\n"
 "\t\tThanks again,\n"
 "\t\t{from_name}"
@@ -573,39 +592,33 @@ msgid "Note: only select forms if you have enabled forms in the above option"
 msgstr ""
 
 #. translators: [admin]
-#: includes/class-register-block.php:106
-#: assets/scripts/editor.js:221
+#: includes/class-register-block.php:106 assets/scripts/editor.js:221
 msgid "Form"
 msgstr ""
 
 #. translators: [admin]
-#: includes/class-register-block.php:108
-#: assets/scripts/editor.js:213
+#: includes/class-register-block.php:108 assets/scripts/editor.js:213
 msgid "Iframe"
 msgstr ""
 
 #. translators: [front] petitions call to action button
-#: includes/class-register-block.php:261
-#: assets/scripts/editor.js:440
+#: includes/class-register-block.php:261 assets/scripts/editor.js:440
 msgid "Act Now"
 msgstr ""
 
 #. translators: [admin/front]
-#: includes/class-register-block.php:266
-#: assets/scripts/editor.js:548
+#: includes/class-register-block.php:266 assets/scripts/editor.js:548
 msgid "Sign the petition"
 msgstr ""
 
 #. translators: [admin/front] whether the user wants to sign up to the newsletter when signing a petition
-#: includes/class-register-block.php:280
-#: assets/scripts/editor.js:308
+#: includes/class-register-block.php:280 assets/scripts/editor.js:308
 #: assets/scripts/editor.js:737
 msgid "Yes, I agree"
 msgstr ""
 
 #. translators: [admin/front] whether the user wants to sign up to the newsletter when signing a petition
-#: includes/class-register-block.php:284
-#: assets/scripts/editor.js:321
+#: includes/class-register-block.php:284 assets/scripts/editor.js:321
 #: assets/scripts/editor.js:741
 msgid "No, I do not agree"
 msgstr ""
@@ -621,28 +634,24 @@ msgid "Signatures"
 msgstr ""
 
 #. translators: [front/admin] input placeholder text
-#: includes/class-signatures-list-table.php:48
-#: views/petition-form.php:6
+#: includes/class-signatures-list-table.php:48 views/petition-form.php:6
 #: views/petition-form.php:7
 msgid "First Name"
 msgstr ""
 
 #. translators: [front/admin] input placeholder text
-#: includes/class-signatures-list-table.php:50
-#: views/petition-form.php:8
+#: includes/class-signatures-list-table.php:50 views/petition-form.php:8
 #: views/petition-form.php:9
 msgid "Last Name"
 msgstr ""
 
 #. translators: [front/admin] input placeholder text
-#: includes/class-signatures-list-table.php:52
-#: views/petition-form.php:12
+#: includes/class-signatures-list-table.php:52 views/petition-form.php:12
 msgid "Email Address"
 msgstr ""
 
 #. translators: [front/admin] input placeholder text
-#: includes/class-signatures-list-table.php:54
-#: views/petition-form.php:10
+#: includes/class-signatures-list-table.php:54 views/petition-form.php:10
 #: views/petition-form.php:11
 msgid "Telephone"
 msgstr ""
@@ -662,12 +671,13 @@ msgid "Hidden"
 msgstr ""
 
 #. translators: [front/admin] %s: the current number of signatures
-#: views/block-form.php:27
-#: assets/scripts/editor.js:570
+#: views/block-form.php:27 assets/scripts/editor.js:570
 msgid "%s has signed."
 msgid_plural "%s have signed."
 msgstr[0] ""
 msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #. translators: [front] shown on petition block when it has yet to be signed by anyone
 #: views/block-form.php:27
@@ -675,8 +685,7 @@ msgid "Be the first to sign!"
 msgstr ""
 
 #. translators: [admin/front] %s: the target number of signatures
-#: views/block-form.php:29
-#: assets/scripts/editor.js:578
+#: views/block-form.php:29 assets/scripts/editor.js:578
 msgctxt "Petition target signatory count"
 msgid "Let's get to %s"
 msgstr ""
@@ -686,19 +695,18 @@ msgid "This screen is for managing global settings for all petitions."
 msgstr ""
 
 #: views/help.php:2
-msgid "Fields that can be overridden on a per-petition basis are marked as such."
+msgid ""
+"Fields that can be overridden on a per-petition basis are marked as such."
 msgstr ""
 
 #. translators: [front] input informational text
-#: views/petition-form.php:6
-#: views/petition-form.php:8
+#: views/petition-form.php:6 views/petition-form.php:8
 #: views/petition-form.php:12
 msgid "Required Field"
 msgstr ""
 
 #. translators: [front/admin] input placeholder text
-#: views/petition-form.php:13
-#: assets/scripts/editor.js:525
+#: views/petition-form.php:13 assets/scripts/editor.js:525
 msgid "Email"
 msgstr ""
 
@@ -848,7 +856,8 @@ msgstr ""
 
 #. translators: [admin]
 #: assets/scripts/editor.js:414
-msgid "Replace the progress indicator with the above text when the target is reached"
+msgid ""
+"Replace the progress indicator with the above text when the target is reached"
 msgstr ""
 
 #. translators: [admin]
