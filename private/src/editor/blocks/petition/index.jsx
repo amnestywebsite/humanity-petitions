@@ -2,6 +2,7 @@ import DisplayComponent from './DisplayComponent.jsx';
 
 const { assign } = lodash;
 const { registerBlockType } = wp.blocks;
+const { RawHTML } = wp.element;
 const { __ } = wp.i18n;
 
 const strType = {
@@ -67,6 +68,7 @@ registerBlockType('amnesty/petition', {
     iframeUrl: strType,
     iframeHeight: intType,
     passUtmParameters: boolTypeFalse,
+    rawHtml: strType,
   },
   edit: DisplayComponent,
   save: () => null,

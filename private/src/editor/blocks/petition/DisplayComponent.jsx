@@ -1,3 +1,4 @@
+import HtmlSource from './HtmlSource.jsx';
 import { loadBlockStyles, unloadBlockStyles } from './utils';
 
 const { InspectorControls, PlainText } = wp.blockEditor;
@@ -6,25 +7,56 @@ const { PanelBody, RadioControl, SelectControl, TextareaControl, TextControl, To
 const { Component, Fragment } = wp.element;
 const { __, _n, _x, sprintf } = wp.i18n;
 
-const sourceOptions = [
-  {
-    /* translators: [admin] */
-    label: __('Iframe', 'aip'),
-    value: 'iframe',
-  },
-];
-
-if (window?.aiSettings?.petitionForm) {
-  sourceOptions.unshift({
-    /* translators: [admin] */
-    label: __('Form', 'aip'),
-    value: 'form',
-  });
-}
-
 export default class DisplayComponent extends Component {
+  state = {
+    htmlIframeStyles: {},
+    sourceOptions: [
+      {
+        /* translators: [admin] */
+        label: __('Iframe', 'aip'),
+        value: 'iframe',
+      },
+    ],
+  }
+
+  htmlIframeResizeHandler = (message) => {
+    if (message?.data?.action === 'resize') {
+      this.setState({
+        htmlIframeStyles: {
+          height: `${message.source.document.documentElement.getBoundingClientRect().height}px`,
+        },
+      });
+    }
+  };
+
   componentDidMount() {
     const { petitionSource } = this.props.attributes;
+
+    if (window?.aiSettings?.petitionForm) {
+      this.setState({
+        sourceOptions: [
+          ...this.state.sourceOptions,
+          {
+            /* translators: [admin] */
+            label: __('Form', 'aip'),
+            value: 'form',
+          },
+        ],
+      });
+    }
+
+    if (window?.amnestyPetitions?.htmlEnabled === '1') {
+      this.setState({
+        sourceOptions: [
+          ...this.state.sourceOptions,
+          {
+            /* translators: [admin] */
+            label: __('HTML', 'aip'),
+            value: 'html',
+          },
+        ],
+      });
+    }
 
     if (petitionSource !== 'form') {
       return;
@@ -48,6 +80,10 @@ export default class DisplayComponent extends Component {
     unloadBlockStyles();
   }
 
+  componentWillUnmount() {
+    window.removeEventListener('message', this.htmlIframeResizeHandler);
+  }
+
   renderControls() {
     const { attributes, setAttributes } = this.props;
 
@@ -55,14 +91,14 @@ export default class DisplayComponent extends Component {
       <PanelBody title={/* translators: [admin] */ __('Petition Form Source', 'aip')}>
         <SelectControl
           label={/* translators: [admin] */ __('Source', 'aip')}
-          options={sourceOptions}
+          options={this.state.sourceOptions}
           value={attributes.petitionSource}
           onChange={(petitionSource) => setAttributes({ petitionSource })}
         />
       </PanelBody>
     );
 
-    if (attributes.petitionSource === 'iframe') {
+    if (attributes.petitionSource !== 'form') {
       return <InspectorControls>{sourceSelector}</InspectorControls>;
     }
 
@@ -442,9 +478,26 @@ export default class DisplayComponent extends Component {
   }
 
   render() {
-    const { attributes, className } = this.props;
+    const { attributes, className, setAttributes } = this.props;
     const { petitionSource } = attributes;
     const { formEnabled } = amnestyPetitions;
+
+    if (petitionSource === 'html') {
+      window.addEventListener('message', this.htmlIframeResizeHandler);
+
+      return (
+        <Fragment>
+          {this.renderControls()}
+          <div className={`${className} is-html`} style={this.state.htmlIframeStyles}>
+            <HtmlSource
+              content={attributes.rawHtml}
+              setContent={(rawHtml) => setAttributes({ rawHtml })}
+              userCanEdit={window?.amnestyPetitions?.htmlEnabled === '1'}
+            />
+          </div>
+        </Fragment>
+      );
+    }
 
     if (!formEnabled || petitionSource === 'iframe') {
       return (
