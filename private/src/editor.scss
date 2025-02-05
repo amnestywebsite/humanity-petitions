@@ -153,3 +153,24 @@
 .wp-block-amnesty-petition .petition-form-iframe input {
   color: #000;
 }
+
+.wp-block-amnesty-petition.is-html {
+  padding: 0;
+  border: 1px solid #000;
+  width: 400px;
+  max-width: 100%;
+}
+
+.wp-block-amnesty-petition.is-html textarea {
+  max-height: 100%;
+  overflow-y: scroll;
+  padding: 4px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: initial;
+  text-transform: unset;
+}
+
+.wp-block-amnesty-petition.is-html iframe {
+  display: block;
+  height: 100%;
+}
