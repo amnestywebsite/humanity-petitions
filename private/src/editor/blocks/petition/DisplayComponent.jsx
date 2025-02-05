@@ -21,9 +21,16 @@ export default class DisplayComponent extends Component {
 
   htmlIframeResizeHandler = (message) => {
     if (message?.data?.action === 'resize') {
+      const height = Math.max(
+        message.data.height,
+        parseFloat(message.source.frameElement.getAttribute('height')),
+        parseFloat(message.source.document.documentElement.getBoundingClientRect().height),
+        200, // default min-height
+      );
+
       this.setState({
         htmlIframeStyles: {
-          height: `${message.source.document.documentElement.getBoundingClientRect().height}px`,
+          height: `${Math.ceil(height)}px`,
         },
       });
     }
