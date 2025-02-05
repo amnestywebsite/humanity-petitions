@@ -106,6 +106,7 @@ class Register_Block {
 					'form'   => __( 'Form', 'aip' ),
 					/* translators: [admin] */
 					'iframe' => __( 'Iframe', 'aip' ),
+					'html'   => 'HTML',
 				],
 			]
 		);
@@ -133,6 +134,7 @@ class Register_Block {
 			'locale'       => str_replace( '_', '-', get_locale() ),
 			'defaultType'  => $this->default_block_type(),
 			'formEnabled'  => $this->form_enabled(),
+			'htmlEnabled'  => current_user_can( 'unfiltered_html' ),
 			'postTypeSlug' => esc_js( get_option( 'aip_petition_slug' ) ?: 'petition' ),
 		];
 
@@ -178,14 +180,14 @@ class Register_Block {
 		);
 
 		$render_type = $attributes['petitionSource'];
-		if ( ! in_array( $render_type, [ 'form', 'iframe' ], true ) ) {
+		if ( ! in_array( $render_type, [ 'form', 'html', 'iframe' ], true ) ) {
 			$render_type = $this->default_block_type();
 		}
 
 		$template = sprintf( '%s/views/block-%s.php', dirname( Init::$file ), $render_type );
 		$template = apply_filters( 'amnesty_petition_view', $template, $render_type );
 
-		if ( 'iframe' === $render_type ) {
+		if ( 'form' !== $render_type ) {
 			ob_start();
 			require $template;
 			return apply_filters( 'amnesty_petition_view_markup', ob_get_clean(), $render_type );
@@ -287,6 +289,7 @@ class Register_Block {
 			'iframeUrl'                  => $this->string(),
 			'iframeHeight'               => $this->int(),
 			'passUtmParameters'          => $this->bool( false ),
+			'rawHtml'                    => $this->string(),
 		];
 
 		return $this->attributes;
