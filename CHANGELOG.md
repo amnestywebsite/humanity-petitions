@@ -2,6 +2,9 @@
 Features:
 - Add support for raw HTML petitions
 
+Localisation:
+- Add support for Slovenian language
+
 Chores:
 - Bump cross-spawn from 7.0.3 to 7.0.6
 - Bump nanoid from 3.3.7 to 3.3.8
