@@ -1,3 +1,14 @@
+### v2.1.0
+Features:
+- Add support for raw HTML petitions
+
+Chores:
+- Bump cross-spawn from 7.0.3 to 7.0.6
+- Bump nanoid from 3.3.7 to 3.3.8
+
+CI:
+- Fix deployments
+
 ### v2.0.0
 Breaking changes:
 - Typography CSS vars have been replaced
