@@ -1,3 +1,7 @@
+### v2.1.1
+Localisation:
+- Add support for Thai language
+
 ### v2.1.0
 Features:
 - Add support for raw HTML petitions
