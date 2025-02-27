@@ -15,6 +15,7 @@
  * Requires PHP:      8.2.0
  * Requires at least: 5.8.0
  * Tested up to:      6.6.2
+ * Requires Plugins:  CMB2
  */
 
 declare( strict_types = 1 );
@@ -94,8 +95,6 @@ class Init {
 
 		add_filter( 'register_translatable_package', [ $this, 'register_translatable_package' ], 12 );
 
-		add_action( 'all_admin_notices', [ $this, 'check_dependencies' ] );
-
 		add_action( 'plugins_loaded', [ $this, 'textdomain' ] );
 		add_action( 'init', [ $this, 'boot' ] );
 		add_action( 'admin_enqueue_scripts', [ $this, 'enqueue_assets' ] );
@@ -122,27 +121,6 @@ class Init {
 		];
 
 		return $packages;
-	}
-
-	/**
-	 * Output warning & deactivate if dependent plugins aren't active
-	 *
-	 * @return void
-	 */
-	public function check_dependencies(): void {
-		if ( function_exists( 'cmb2_bootstrap' ) ) {
-			return;
-		}
-
-		$missing = 'CMB2';
-		$message = sprintf(
-			// translators: [admin] %s: list of missing plugins
-			__( 'The Amnesty International Petitions plugin requires these plugins to be active: %s', 'aip' ),
-			$missing
-		);
-
-		printf( '<div class="notice notice-error"><p>%s</p></div>', esc_html( $message ) );
-		deactivate_plugins( plugin_basename( __FILE__ ), false, is_multisite() );
 	}
 
 	/**
