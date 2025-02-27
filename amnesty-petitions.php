@@ -1,25 +1,25 @@
 <?php // phpcs:ignore WordPress.Files.FileName.InvalidClassFileName
 
+/**
+ * Plugin Name:       Humanity Petitions
+ * Plugin URI:        https://github.com/amnestywebsite/humanity-petitions
+ * Description:       Enable petitions support, with interface for synchronising data to a CRM. CRM integrations not included.
+ * Version:           2.1.1
+ * Author:            Amnesty International
+ * Author URI:        https://www.amnesty.org
+ * License:           GPLv2
+ * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
+ * Text Domain:       aip
+ * Domain Path:       /languages
+ * Network:           true
+ * Requires PHP:      8.2.0
+ * Requires at least: 5.8.0
+ * Tested up to:      6.6.2
+ */
+
 declare( strict_types = 1 );
 
 namespace Amnesty\Petitions;
-
-/*
-Plugin Name:       Humanity Petitions
-Plugin URI:        https://github.com/amnestywebsite/humanity-petitions
-Description:       Enable petitions support, with interface for synchronising data to a CRM. CRM integrations not included.
-Version:           2.1.1
-Author:            Amnesty International
-Author URI:        https://www.amnesty.org
-License:           GPLv2
-License URI:       https://www.gnu.org/licenses/gpl-2.0.html
-Text Domain:       aip
-Domain Path:       /languages
-Network:           true
-Requires PHP:      8.2.0
-Requires at least: 5.8.0
-Tested up to:      6.6.2
-*/
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
