@@ -39,7 +39,7 @@ export default class DisplayComponent extends Component {
   componentDidMount() {
     const { petitionSource } = this.props.attributes;
 
-    if (window?.aiSettings?.petitionForm) {
+    if (window?.amnestyPetitions?.formEnabled) {
       this.setState({
         sourceOptions: [
           ...this.state.sourceOptions,
