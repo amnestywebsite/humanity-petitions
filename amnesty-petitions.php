@@ -90,13 +90,11 @@ class Init {
 	 * Bind hooks and instantiate pages
 	 */
 	public function __construct() {
-		$this->data = get_plugin_data( __FILE__ );
-
 		add_filter( 'register_translatable_package', [ $this, 'register_translatable_package' ], 12 );
 
 		add_action( 'all_admin_notices', [ $this, 'check_dependencies' ] );
 
-		add_action( 'plugins_loaded', [ $this, 'textdomain' ] );
+		add_action( 'init', [ $this, 'textdomain' ] );
 		add_action( 'init', [ $this, 'boot' ] );
 		add_action( 'admin_enqueue_scripts', [ $this, 'enqueue_assets' ] );
 
@@ -160,6 +158,8 @@ class Init {
 	 * @return void
 	 */
 	public function boot(): void {
+		$this->data = get_plugin_data( __FILE__ );
+
 		new Post_Type_Petition();
 		new Post_Type_Signatory();
 		new Petition_Handler( $this::get_logger(), Error_Handler::instance() );
