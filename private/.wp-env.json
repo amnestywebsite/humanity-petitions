@@ -1,0 +1,4 @@
+{
+  "themes": [],
+  "plugins": ["cmb2/cmb2", ".."]
+}
