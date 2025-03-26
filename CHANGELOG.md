@@ -1,3 +1,8 @@
+### v2.1.3
+Fixes:
+- Load text domain later (WP 6.7 compat.)
+- Migrate plugin dependency check to WP core version
+
 ### v2.1.2
 Fixes:
 - Incorrect reference to script-localised data
