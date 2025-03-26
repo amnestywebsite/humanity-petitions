@@ -1,3 +1,15 @@
+### v2.1.2
+Fixes:
+- Incorrect reference to script-localised data
+- Replace deprecated slotfill
+
+Build:
+- Add wp-env support
+- Upgrade dependencies
+
+CI:
+- Migrate from Travis CI to GitHub Actions
+
 ### v2.1.1
 Localisation:
 - Add support for Thai language
