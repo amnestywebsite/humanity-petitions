@@ -13,4 +13,6 @@ if ( $attributes['passUtmParameters'] ) {
 }
 
 ?>
-<iframe width="100%" height=<?php echo esc_attr( $attributes['iframeHeight'] ); ?> src="<?php echo esc_url( $url ); ?>" frameborder="0"></iframe>
+<div class="article-sidebar">
+	<iframe width="100%" height=<?php echo esc_attr( $attributes['iframeHeight'] ); ?> src="<?php echo esc_url( $url ); ?>" frameborder="0"></iframe>
+</div>

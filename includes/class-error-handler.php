@@ -67,9 +67,7 @@ class Error_Handler extends Singleton {
 	 * @return void
 	 */
 	public function render_errors(): void {
-		echo '<div class="amnesty-petitions-errors">';
 		array_map( [ $this, 'render_error' ], $this->errors );
-		echo '</div>';
 
 		delete_transient( 'amnesty_petitions_errors' );
 	}
@@ -82,7 +80,13 @@ class Error_Handler extends Singleton {
 	 * @return void
 	 */
 	public function render_error( array $error = [] ): void {
-		$html = sprintf( '<div class="amnesty-petitions-error severity-%s">%s</div>', $error['severity'], $error['message'] );
+		$html = sprintf(
+			'<!-- wp:paragraph {"className":"amnesty-petitions-error severity-%1$s"} -->' .
+			'<p class="wp-block-paragraph amnesty-petitions-error severity-%1$s">%2$s</p>' .
+			'<!-- /wp:paragraph -->',
+			esc_attr( $error['severity'] ),
+			esc_html( $error['message'] ),
+		);
 		echo wp_kses_post( apply_filters( 'amnesty_petition_error_html', $html ) );
 	}
 
