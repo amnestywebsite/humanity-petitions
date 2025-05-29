@@ -1,3 +1,7 @@
+### v2.1.4
+Fixes:
+- Update block markup for FSE compatibility
+
 ### v2.1.3
 Fixes:
 - Load text domain later (WP 6.7 compat.)
