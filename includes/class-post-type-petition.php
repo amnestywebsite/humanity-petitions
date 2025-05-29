@@ -52,6 +52,7 @@ class Post_Type_Petition {
 		add_action( 'pre_get_posts', [ $this, 'filter_hidden_from_queries' ] );
 		add_filter( 'post_row_actions', [ $this, 'actions' ], 10, 2 );
 		add_filter( 'post_type_link', [ $this, 'fix_permalinks' ], 10, 2 );
+		add_filter( 'single_template_hierarchy', [ $this, 'template_hierarchy' ] );
 	}
 
 	/**
@@ -327,6 +328,23 @@ class Post_Type_Petition {
 		$post_link = sprintf( '%s/%s/', $rewrite, $post->post_name );
 
 		return esc_url( home_url( $post_link ) );
+	}
+
+	/**
+	 * Overload the petitions single template
+	 *
+	 * Particularly useful when the post type slug has been localised
+	 *
+	 * @param array<int,string> $templates the default templates
+	 *
+	 * @return array<int,string>
+	 */
+	public function template_hierarchy( array $templates ): array {
+		if ( get_post_type() === $this->post_type ) {
+			array_unshift( $templates, 'single-petition.html' );
+		}
+
+		return $templates;
 	}
 
 	/**
