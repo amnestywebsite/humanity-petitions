@@ -1,3 +1,7 @@
+### v2.1.5
+Fixes:
+- Load correct theme templaate when post type slug is localised
+
 ### v2.1.4
 Fixes:
 - Update block markup for FSE compatibility
