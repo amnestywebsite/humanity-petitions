@@ -94,7 +94,8 @@ registerPlugin('amnesty-hide-from-curation', {
       const visibilities = select('core').getEntityRecords('taxonomy', 'visibility');
       const hiddenTerms = (visibilities || [])
         .filter((visibility) => visibility.slug === 'hidden')
-        .map((visibility) => visibility.id);
+        .map((visibility) => visibility.id)
+        .sort();
 
       return { isLoading, visibilities, hiddenTerms };
     }),
