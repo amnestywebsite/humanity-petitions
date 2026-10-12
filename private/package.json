@@ -22,7 +22,7 @@
   },
   "devDependencies": {
     "@babel/cli": "^7.26.4",
-    "@babel/core": "^7.29.7",
+    "@babel/core": "^8.0.0",
     "@babel/eslint-parser": "^7.26.8",
     "@babel/plugin-proposal-pipeline-operator": "^7.26.7",
     "@babel/plugin-transform-class-properties": "^7.25.9",
@@ -48,7 +48,7 @@
     "file-loader": "^6.2.0",
     "json-schema": "^0.4.0",
     "mini-css-extract-plugin": "^2.9.2",
-    "postcss": "^8.5.18",
+    "postcss": "^8.5.23",
     "postcss-banner": "^4.0.1",
     "postcss-loader": "^8.1.1",
     "postcss-pxtorem": "^6.1.0",
