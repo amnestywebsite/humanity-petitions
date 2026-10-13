@@ -49,10 +49,10 @@ class Petition_Handler {
 	/**
 	 * Bind hooks
 	 *
-	 * @param AbstractLogger $logger logger instance
-	 * @param Error_Handler  $errors error handler instance
+	 * @param AbstractLogger|null $logger logger instance
+	 * @param Error_Handler|null  $errors error handler instance
 	 */
-	public function __construct( AbstractLogger $logger = null, Error_Handler $errors = null ) {
+	public function __construct( ?AbstractLogger $logger = null, ?Error_Handler $errors = null ) {
 		$this->logger = $logger;
 		$this->errors = $errors;
 
@@ -87,8 +87,8 @@ class Petition_Handler {
 				$this->blocks,
 				function ( $block ) {
 					return 'amnesty/petition' === $block['blockName'];
-				} 
-			) 
+				}
+			)
 		)[0] ?? false;
 
 		if ( ! $this->block ) {
@@ -150,7 +150,7 @@ class Petition_Handler {
 			function ( $key = '' ): bool {
 				return ! preg_match( '/^_.+/', $key );
 			},
-			ARRAY_FILTER_USE_KEY 
+			ARRAY_FILTER_USE_KEY
 		);
 
 		$this->trigger_signature( $signatory_data );
@@ -270,13 +270,13 @@ class Petition_Handler {
 	/**
 	 * Send petition signature thank you email
 	 *
-	 * @param array    $settings  mail settings
-	 * @param \WP_Post $petition  the petition that was signed
-	 * @param array    $signature the signatory information
+	 * @param array         $settings  mail settings
+	 * @param \WP_Post|null $petition  the petition that was signed
+	 * @param array         $signature the signatory information
 	 *
 	 * @return void
 	 */
-	protected function send_email( array $settings = [], WP_Post $petition = null, array $signature = [] ): void {
+	protected function send_email( array $settings = [], ?WP_Post $petition = null, array $signature = [] ): void {
 		$subject = $this->get_mail_subject( $settings, $petition );
 		$message = $this->get_mail_message( $settings, $petition, $signature );
 
@@ -287,7 +287,7 @@ class Petition_Handler {
 			$message,
 			[
 				sprintf( 'FROM: %s', $this->get_mail_from( $settings ) ),
-			] 
+			]
 		);
 	}
 
@@ -358,12 +358,12 @@ class Petition_Handler {
 	/**
 	 * Get thank you email subject
 	 *
-	 * @param array    $settings mail settings
-	 * @param \WP_Post $petition the petition that was signed
+	 * @param array         $settings mail settings
+	 * @param \WP_Post|null $petition the petition that was signed
 	 *
 	 * @return string
 	 */
-	protected function get_mail_subject( array $settings = [], WP_Post $petition = null ): string {
+	protected function get_mail_subject( array $settings = [], ?WP_Post $petition = null ): string {
 		/* translators: [front] */
 		$subject = _x( 'Thank you for signing the petition "{petition_title}"', 'Petition signature thank you email subject', 'aip' );
 
@@ -371,7 +371,7 @@ class Petition_Handler {
 			$subject = $settings['mail_subject'];
 		}
 
-		return str_replace(
+		return (string) str_replace(
 			[ '{site_name}', '{petition_title}' ],
 			[ get_bloginfo( 'name' ), $petition->post_title ],
 			$subject
@@ -381,13 +381,13 @@ class Petition_Handler {
 	/**
 	 * Get thank you email body
 	 *
-	 * @param array    $settings  mail settings
-	 * @param \WP_Post $petition  the petition that was signed
-	 * @param array    $signature the signatory
+	 * @param array         $settings  mail settings
+	 * @param \WP_Post|null $petition  the petition that was signed
+	 * @param array         $signature the signatory
 	 *
 	 * @return string
 	 */
-	protected function get_mail_message( array $settings = [], WP_Post $petition = null, array $signature = [] ): string {
+	protected function get_mail_message( array $settings = [], ?WP_Post $petition = null, array $signature = [] ): string {
 		/* translators: [front] */
 		$message = _x(
 			'Hello {first_name},
@@ -399,7 +399,7 @@ class Petition_Handler {
 		Thanks again,
 		{from_name}',
 			'Petition signature thank you email body',
-			'aip' 
+			'aip'
 		);
 
 		if ( ! empty( $settings['mail_message'] ) ) {

@@ -19,7 +19,7 @@ class Page_Logs {
 	/**
 	 * Logger class instance
 	 *
-	 * @var \Amnesty\Petitions\AbstractLogger
+	 * @var \Amnesty\Petitions\AbstractLogger|null
 	 */
 	protected $logger = null;
 
@@ -33,9 +33,9 @@ class Page_Logs {
 	/**
 	 * Bind hooks
 	 *
-	 * @param AbstractLogger $logger logger class instance
+	 * @param AbstractLogger|null $logger logger class instance
 	 */
-	public function __construct( AbstractLogger $logger = null ) {
+	public function __construct( ?AbstractLogger $logger = null ) {
 		$this->logger = $logger;
 
 		add_action( 'admin_menu', [ $this, 'register_page' ] );
@@ -102,7 +102,7 @@ class Page_Logs {
 				'label'   => __( 'Petition Logs Per Page', 'aip' ),
 				'option'  => 'amnesty_petitions_logs_per_page',
 				'default' => 20,
-			] 
+			]
 		);
 	}
 
