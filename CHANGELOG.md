@@ -1,3 +1,7 @@
+### v2.1.6
+Improvements:
+- Add support for PHP 8.4
+
 ### v2.1.5
 Fixes:
 - Load correct theme templaate when post type slug is localised
