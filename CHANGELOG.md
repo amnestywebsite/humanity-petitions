@@ -1,3 +1,7 @@
+### v2.1.7
+Fixes:
+- Fix unauthenticated signer PII disclosure via REST API
+
 ### v2.1.6
 Improvements:
 - Add support for PHP 8.4

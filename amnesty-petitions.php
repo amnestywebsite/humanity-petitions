@@ -4,7 +4,7 @@
  * Plugin Name:       Humanity Petitions
  * Plugin URI:        https://github.com/amnestywebsite/humanity-petitions
  * Description:       Enable petitions support, with interface for synchronising data to a CRM. CRM integrations not included.
- * Version:           2.1.6
+ * Version:           2.1.7
  * Author:            Amnesty International
  * Author URI:        https://www.amnesty.org
  * License:           GPLv2
@@ -14,7 +14,7 @@
  * Network:           true
  * Requires PHP:      8.2.0
  * Requires at least: 5.8.0
- * Tested up to:      6.7.2
+ * Tested up to:      6.9
  * Requires Plugins:  cmb2
  */
 
