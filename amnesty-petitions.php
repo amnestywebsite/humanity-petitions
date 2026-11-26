@@ -42,6 +42,7 @@ require_once __DIR__ . '/includes/class-exception.php';
 require_once __DIR__ . '/includes/class-logs-list-table.php';
 require_once __DIR__ . '/includes/class-signatures-list-table.php';
 require_once __DIR__ . '/includes/class-post-type-petition.php';
+require_once __DIR__ . '/includes/class-signatory-rest-controller.php';
 require_once __DIR__ . '/includes/class-post-type-signatory.php';
 require_once __DIR__ . '/includes/class-petition-handler.php';
 require_once __DIR__ . '/includes/class-register-block.php';
