@@ -1,3 +1,7 @@
+### v2.1.8
+Fixes:
+- Re-enable REST API for signatories; restrict read access
+
 ### v2.1.7
 Fixes:
 - Fix unauthenticated signer PII disclosure via REST API
