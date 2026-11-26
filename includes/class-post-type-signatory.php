@@ -43,7 +43,7 @@ class Post_Type_Signatory {
 			'has_archive'         => false,
 			'exclude_from_search' => true,
 			'publicly_queryable'  => false,
-			'show_in_rest'        => true,
+			'show_in_rest'        => false,
 			'codename'            => 'signatory',
 		];
 	}
